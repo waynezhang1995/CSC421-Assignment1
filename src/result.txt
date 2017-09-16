@@ -1,0 +1,12 @@
+YuWei (Wayne) Zhang V00805647
+Haodong Tao V00836169
+
+Question 1:
+BreadthFirstTreeSearch:		(cost=568.0, expansions=21)	Timisoara Arad Sibiu Fagaras Bucharest
+BreadthFirstGraphSearch:	(cost=568.0, expansions=11)	Timisoara Arad Sibiu Fagaras Bucharest
+DepthFirstTreeSearch:		(cost=1281.0, expansions=12)	Timisoara Lugoj Timisoara Lugoj Timisoara Lugoj Timisoara Lugoj Mehadia Drobeta Craiova Pitesti Bucharest
+DepthFirstGrapthSearch:		(cost=720.0, expansions=7)	Timisoara Lugoj Mehadia Drobeta Craiova Rimnicu Pitesti Bucharest
+UniformCostGraphSearch:		(cost=536.0, expansions=12)	Timisoara Arad Sibiu Rimnicu Pitesti Bucharest
+UniformCostTreeSearch:		(cost=536.0, expansions=92)	Timisoara Arad Sibiu Rimnicu Pitesti Bucharest
+IterativeDeepeningTreeSearch:	(cost=568.0, expansions=17)	Timisoara Arad Sibiu Fagaras Bucharest
+IterativeDeepeningGraphSearch:	(cost=568.0, expansions=4)	Timisoara Arad Sibiu Fagaras Bucharest
