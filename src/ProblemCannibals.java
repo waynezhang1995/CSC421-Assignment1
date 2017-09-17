@@ -12,7 +12,10 @@ public class ProblemCannibals extends Problem {
 
     boolean goal_test(Object state) {
         StateCannibals can_state = (StateCannibals) state;
-
+        // System.out.println("canR: " + can_state.canArray[cannR]);
+        // System.out.println("missR: " + can_state.canArray[missR]);
+        // System.out.println("boatR: " + can_state.canArray[boatR]);
+        // System.out.println();
         if (can_state.canArray[cannR] == 3 && can_state.canArray[missR] == 3 && can_state.canArray[boatR] == 1)
             return true;
         else
@@ -142,20 +145,24 @@ public class ProblemCannibals extends Problem {
 
     private boolean isValid(StateCannibals state) {
         //Checking to see if any element of the array is negative
-        for (int i = 0; i < 6; i++)
-            if (state.canArray[i] < 0)
+        for (int i = 0; i < 6; i++) {
+            if (state.canArray[i] < 0) {
                 return false;
+            }
+        }
 
         //Checking to see if the numbers of cannibals, missionaries, and boat
         //are more then 3,3,1 respectively
-        if (state.canArray[]) {
 
+        if ((state.canArray[missL] + state.canArray[missR]) != 3 || (state.canArray[cannL] + state.canArray[cannR]) != 3
+                || (state.canArray[boatL] + state.canArray[boatR]) !=  1) {
+            return false;
         }
-        //TODO
 
         //Now, checking if cannibals out number missionaries
-        //TODO
-
+        if (((state.canArray[cannL] > state.canArray[missL]) && (state.canArray[missL] != 0)) || ((state.canArray[cannR] > state.canArray[missR]) && (state.canArray[missR] != 0))){
+            return false;
+        }
         return true;
     }
 
