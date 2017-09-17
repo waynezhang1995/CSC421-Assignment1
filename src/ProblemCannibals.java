@@ -12,10 +12,6 @@ public class ProblemCannibals extends Problem {
 
     boolean goal_test(Object state) {
         StateCannibals can_state = (StateCannibals) state;
-        // System.out.println("canR: " + can_state.canArray[cannR]);
-        // System.out.println("missR: " + can_state.canArray[missR]);
-        // System.out.println("boatR: " + can_state.canArray[boatR]);
-        // System.out.println();
         if (can_state.canArray[cannR] == 3 && can_state.canArray[missR] == 3 && can_state.canArray[boatR] == 1)
             return true;
         else
