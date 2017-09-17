@@ -12,7 +12,7 @@ IterativeDeepeningTreeSearch:	(cost=568.0, expansions=17)	Timisoara Arad Sibiu F
 IterativeDeepeningGraphSearch:	(cost=568.0, expansions=4)	Timisoara Arad Sibiu Fagaras Bucharest
 
 Question 2:
-AStarTreeSearch:			(cost=536.0, expansions=11)	Timisoara Arad Sibiu Rimnicu Pitesti Bucharest 
+AStarTreeSearch:			(cost=536.0, expansions=11)	Timisoara Arad Sibiu Rimnicu Pitesti Bucharest
 
 Timisoara(g=0.0, h=329.0, f=329.0) order=0
   Lugoj(g=111.0, h=244.0, f=355.0) order=1
@@ -44,7 +44,7 @@ Timisoara(g=0.0, h=329.0, f=329.0) order=0
       Oradea(g=409.0, h=380.0, f=789.0) order=-1
     Zerind(g=193.0, h=374.0, f=567.0) order=-1
 
-AStarGraphSearch:			(cost=536.0, expansions=10)	Timisoara Arad Sibiu Rimnicu Pitesti Bucharest 
+AStarGraphSearch:			(cost=536.0, expansions=10)	Timisoara Arad Sibiu Rimnicu Pitesti Bucharest
 
 Timisoara(g=0.0, h=329.0, f=329.0) order=0
   Lugoj(g=111.0, h=244.0, f=355.0) order=1
@@ -73,3 +73,15 @@ Timisoara(g=0.0, h=329.0, f=329.0) order=0
       Arad(g=398.0, h=366.0, f=764.0) order=-1
       Oradea(g=409.0, h=380.0, f=789.0) order=-1
     Zerind(g=193.0, h=374.0, f=567.0) order=-1
+
+Question 3:
+BreadthFirstTreeSearch:		(cost=11.0, expansions=12276)	 3 3 1 0 0 0  2 2 0 1 1 1  2 3 1 1 0 0  0 3 0 3 0 1  1 3 1 2 0 0  1 1 0 2 2 1  2 2 1 1 1 0  2 0 0 1 3 1  3 0 1 0 3 0  1 0 0 2 3 1  1 1 1 2 2 0  0 0 0 3 3 1
+BreadthFirstGraphSearch:	(cost=11.0, expansions=14)	 3 3 1 0 0 0  2 2 0 1 1 1  2 3 1 1 0 0  0 3 0 3 0 1  1 3 1 2 0 0  1 1 0 2 2 1  2 2 1 1 1 0  2 0 0 1 3 1  3 0 1 0 3 0  1 0 0 2 3 1  1 1 1 2 2 0  0 0 0 3 3 1
+BreadthFirstTreeSearch:		(cost=11.0, expansions=11724)	 3 3 1 0 0 0  1 3 0 2 0 1  2 3 1 1 0 0  0 3 0 3 0 1  1 3 1 2 0 0  1 1 0 2 2 1  2 2 1 1 1 0  2 0 0 1 3 1  3 0 1 0 3 0  1 0 0 2 3 1  1 1 1 2 2 0  0 0 0 3 3 1
+BreadthFirstGraphSearch:	(cost=11.0, expansions=14)	 3 3 1 0 0 0  1 3 0 2 0 1  2 3 1 1 0 0  0 3 0 3 0 1  1 3 1 2 0 0  1 1 0 2 2 1  2 2 1 1 1 0  2 0 0 1 3 1  3 0 1 0 3 0  1 0 0 2 3 1  2 0 1 1 3 0  0 0 0 3 3 1
+DepthFirstTreeSearch:		(cost=113.0, expansions=113)	 3 3 1 0 0 0  2 3 0 1 0 1  3 3 1 0 0 0  1 3 0 2 0 1  3 3 1 0 0 0  2 3 0 1 0 1  3 3 1 0 0 0  1 3 0 2 0 1  2 3 1 1 0 0  0 3 0 3 0 1  2 3 1 1 0 0  2 2 0 1 1 1  2 3 1 1 0 0  1 3 0 2 0 1  3 3 1 0 0 0  2 3 0 1 0 1  3 3 1 0 0 0  1 3 0 2 0 1  3 3 1 0 0 0  2 2 0 1 1 1  3 3 1 0 0 0  2 2 0 1 1 1  2 3 1 1 0 0  1 3 0 2 0 1  2 3 1 1 0 0  2 2 0 1 1 1  2 3 1 1 0 0  2 2 0 1 1 1  2 3 1 1 0 0  0 3 0 3 0 1  1 3 1 2 0 0  0 3 0 3 0 1  2 3 1 1 0 0  0 3 0 3 0 1  2 3 1 1 0 0  1 3 0 2 0 1  2 3 1 1 0 0  1 3 0 2 0 1  2 3 1 1 0 0  2 2 0 1 1 1  2 3 1 1 0 0  0 3 0 3 0 1  2 3 1 1 0 0  2 2 0 1 1 1  2 3 1 1 0 0  1 3 0 2 0 1  2 3 1 1 0 0  0 3 0 3 0 1  1 3 1 2 0 0  0 3 0 3 0 1  1 3 1 2 0 0  1 1 0 2 2 1  1 3 1 2 0 0  0 3 0 3 0 1  2 3 1 1 0 0  2 2 0 1 1 1  2 3 1 1 0 0  2 2 0 1 1 1  2 3 1 1 0 0  2 2 0 1 1 1  2 3 1 1 0 0  2 2 0 1 1 1  2 3 1 1 0 0  0 3 0 3 0 1  1 3 1 2 0 0  1 1 0 2 2 1  1 3 1 2 0 0  1 1 0 2 2 1  1 3 1 2 0 0  1 1 0 2 2 1  2 2 1 1 1 0  2 0 0 1 3 1  2 2 1 1 1 0  2 0 0 1 3 1  2 2 1 1 1 0  2 0 0 1 3 1  2 2 1 1 1 0  1 1 0 2 2 1  2 2 1 1 1 0  2 0 0 1 3 1  3 0 1 0 3 0  2 0 0 1 3 1  2 2 1 1 1 0  1 1 0 2 2 1  2 2 1 1 1 0  2 0 0 1 3 1  3 0 1 0 3 0  1 0 0 2 3 1  1 1 1 2 2 0  1 0 0 2 3 1  2 0 1 1 3 0  1 0 0 2 3 1  3 0 1 0 3 0  2 0 0 1 3 1  2 2 1 1 1 0  1 1 0 2 2 1  2 2 1 1 1 0  2 0 0 1 3 1  2 2 1 1 1 0  1 1 0 2 2 1  2 2 1 1 1 0  1 1 0 2 2 1  1 3 1 2 0 0  1 1 0 2 2 1  1 3 1 2 0 0  1 1 0 2 2 1  2 2 1 1 1 0  2 0 0 1 3 1  3 0 1 0 3 0  1 0 0 2 3 1  1 1 1 2 2 0  1 0 0 2 3 1  1 1 1 2 2 0  0 0 0 3 3 1
+DepthFirstGrapthSearch:		(cost=11.0, expansions=12)	 3 3 1 0 0 0  1 3 0 2 0 1  2 3 1 1 0 0  0 3 0 3 0 1  1 3 1 2 0 0  1 1 0 2 2 1  2 2 1 1 1 0  2 0 0 1 3 1  3 0 1 0 3 0  1 0 0 2 3 1  2 0 1 1 3 0  0 0 0 3 3 1
+UniformCostGraphSearch:		(cost=11.0, expansions=14)	 3 3 1 0 0 0  2 2 0 1 1 1  2 3 1 1 0 0  0 3 0 3 0 1  1 3 1 2 0 0  1 1 0 2 2 1  2 2 1 1 1 0  2 0 0 1 3 1  3 0 1 0 3 0  1 0 0 2 3 1  2 0 1 1 3 0  0 0 0 3 3 1
+UniformCostTreeSearch:		(cost=11.0, expansions=8616)	 3 3 1 0 0 0  2 2 0 1 1 1  2 3 1 1 0 0  0 3 0 3 0 1  1 3 1 2 0 0  1 1 0 2 2 1  2 2 1 1 1 0  2 0 0 1 3 1  3 0 1 0 3 0  1 0 0 2 3 1  1 1 1 2 2 0  0 0 0 3 3 1
+IterativeDeepeningTreeSearch:	(cost=11.0, expansions=1942)	 3 3 1 0 0 0  1 3 0 2 0 1  2 3 1 1 0 0  0 3 0 3 0 1  1 3 1 2 0 0  1 1 0 2 2 1  2 2 1 1 1 0  2 0 0 1 3 1  3 0 1 0 3 0  1 0 0 2 3 1  1 1 1 2 2 0  0 0 0 3 3 1
+IterativeDeepeningGraphSearch:	(cost=11.0, expansions=11)	 3 3 1 0 0 0  2 2 0 1 1 1  2 3 1 1 0 0  0 3 0 3 0 1  1 3 1 2 0 0  1 1 0 2 2 1  2 2 1 1 1 0  2 0 0 1 3 1  3 0 1 0 3 0  1 0 0 2 3 1  1 1 1 2 2 0  0 0 0 3 3 1

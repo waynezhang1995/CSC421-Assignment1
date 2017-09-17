@@ -155,12 +155,13 @@ public class ProblemCannibals extends Problem {
         //are more then 3,3,1 respectively
 
         if ((state.canArray[missL] + state.canArray[missR]) != 3 || (state.canArray[cannL] + state.canArray[cannR]) != 3
-                || (state.canArray[boatL] + state.canArray[boatR]) !=  1) {
+                || (state.canArray[boatL] + state.canArray[boatR]) != 1) {
             return false;
         }
 
         //Now, checking if cannibals out number missionaries
-        if (((state.canArray[cannL] > state.canArray[missL]) && (state.canArray[missL] != 0)) || ((state.canArray[cannR] > state.canArray[missR]) && (state.canArray[missR] != 0))){
+        if (((state.canArray[cannL] > state.canArray[missL]) && (state.canArray[missL] != 0))
+                || ((state.canArray[cannR] > state.canArray[missR]) && (state.canArray[missR] != 0))) {
             return false;
         }
         return true;
@@ -184,5 +185,21 @@ public class ProblemCannibals extends Problem {
         System.out.println("BreadthFirstTreeSearch:\t\t" + search.BreadthFirstTreeSearch());
 
         System.out.println("BreadthFirstGraphSearch:\t" + search.BreadthFirstGraphSearch());
+
+        System.out.println("BreadthFirstTreeSearch:\t\t" + search.BreadthFirstTreeSearch());
+
+        System.out.println("BreadthFirstGraphSearch:\t" + search.BreadthFirstGraphSearch());
+
+        System.out.println("DepthFirstTreeSearch:\t\t" + search.DepthFirstTreeSearch());
+
+        System.out.println("DepthFirstGrapthSearch:\t\t" + search.DepthFirstGraphSearch());
+
+        System.out.println("UniformCostGraphSearch:\t\t" + search.UniformCostGraphSearch());
+
+        System.out.println("UniformCostTreeSearch:\t\t" + search.UniformCostTreeSearch());
+
+        System.out.println("IterativeDeepeningTreeSearch:\t" + search.IterativeDeepeningTreeSearch());
+
+        System.out.println("IterativeDeepeningGraphSearch:\t" + search.IterativeDeepeningGraphSearch());
     }
 }
