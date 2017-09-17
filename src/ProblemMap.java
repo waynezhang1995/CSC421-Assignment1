@@ -95,5 +95,35 @@ public class ProblemMap extends Problem {
 
 		System.out.println("IterativeDeepeningGraphSearch:\t" + search.IterativeDeepeningGraphSearch());
 
+		System.out.println("AStarTreeSearch:\t\t\t" + search.AstarTreeSearch());
+		printTree(search.node_list);
+		System.out.println("AStarGraphSearch:\t\t\t" + search.AstarGraphSearch());
+		printTree(search.node_list);
+
+	}
+
+	public static void printTree(List<Node> node_list){
+		sortTree(node_list);
+		for(int i=0; i<node_list.size(); i++){
+			Node curr = node_list.get(i);
+			for(int d=0; d<curr.depth; d++)
+				System.out.print("  ");
+			System.out.println(curr.state + "(g=" + curr.path_cost + ", h=" + sld.get(curr.state) +
+					", f="+ (curr.path_cost+ sld.get(curr.state)) + ")" + " order=" + curr.order);
+
+		}
+	}
+
+	public static void sortTree(List<Node> node_list){
+		for(int i=0; i<node_list.size(); i++){
+			Node parent = node_list.get(i);
+			for(int j=i+1; j<node_list.size();j++){
+				Node curr = node_list.get(j);
+				if(curr.parent_node == parent){
+					node_list.remove(j);
+					node_list.add(i+1, curr);
+				}
+			}
+		}
 	}
 }
