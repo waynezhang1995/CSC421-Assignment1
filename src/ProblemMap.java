@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.List;
 
 public class ProblemMap extends Problem {
 	Map<String, Map<String, Double>> map;
@@ -70,6 +71,31 @@ public class ProblemMap extends Problem {
 		return sld.get(state);
 	}
 
+	public static void printTree(List<Node> node_list) {
+		sortTree(node_list);
+		for (int i = 0; i < node_list.size(); i++) {
+			Node curr = node_list.get(i);
+			for (int d = 0; d < curr.depth; d++)
+				System.out.print("  ");
+			System.out.println(curr.state + "(g=" + curr.path_cost + ", h=" + sld.get(curr.state) + ", f="
+					+ (curr.path_cost + sld.get(curr.state)) + ")" + " order=" + curr.order);
+
+		}
+	}
+
+	public static void sortTree(List<Node> node_list) {
+		for (int i = 0; i < node_list.size(); i++) {
+			Node parent = node_list.get(i);
+			for (int j = i + 1; j < node_list.size(); j++) {
+				Node curr = node_list.get(j);
+				if (curr.parent_node == parent) {
+					node_list.remove(j);
+					node_list.add(i + 1, curr);
+				}
+			}
+		}
+	}
+
 	public static void main(String[] args) throws Exception {
 		ProblemMap problem = new ProblemMap("romania.txt", "romaniaSLD.txt");
 		problem.initialState = "Timisoara";
@@ -95,35 +121,10 @@ public class ProblemMap extends Problem {
 
 		System.out.println("IterativeDeepeningGraphSearch:\t" + search.IterativeDeepeningGraphSearch());
 
-		System.out.println("AStarTreeSearch:\t\t\t" + search.AstarTreeSearch());
+		System.out.println("\n\nAStarTreeSearch:\t\t" + search.AstarTreeSearch());
 		printTree(search.node_list);
-		System.out.println("AStarGraphSearch:\t\t\t" + search.AstarGraphSearch());
+		System.out.println("\n\nAStarGraphSearch:\t\t" + search.AstarGraphSearch());
 		printTree(search.node_list);
 
-	}
-
-	public static void printTree(List<Node> node_list){
-		sortTree(node_list);
-		for(int i=0; i<node_list.size(); i++){
-			Node curr = node_list.get(i);
-			for(int d=0; d<curr.depth; d++)
-				System.out.print("  ");
-			System.out.println(curr.state + "(g=" + curr.path_cost + ", h=" + sld.get(curr.state) +
-					", f="+ (curr.path_cost+ sld.get(curr.state)) + ")" + " order=" + curr.order);
-
-		}
-	}
-
-	public static void sortTree(List<Node> node_list){
-		for(int i=0; i<node_list.size(); i++){
-			Node parent = node_list.get(i);
-			for(int j=i+1; j<node_list.size();j++){
-				Node curr = node_list.get(j);
-				if(curr.parent_node == parent){
-					node_list.remove(j);
-					node_list.add(i+1, curr);
-				}
-			}
-		}
 	}
 }
