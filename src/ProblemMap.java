@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class ProblemMap extends Problem {
 	Map<String, Map<String, Double>> map;
-	Map<String, Double> sld;
+	static Map<String, Double> sld;
 
 	public Object goalState;
 
