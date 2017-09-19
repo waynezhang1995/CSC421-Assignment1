@@ -168,7 +168,7 @@ public class ProblemCannibals extends Problem {
     }
 
     /**
-     * Heuristic function: Number of trip needed
+     * Heuristic function
      * (missL + cannL) - 1
      */
     public double h(Object state) {
