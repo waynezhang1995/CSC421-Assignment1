@@ -13,7 +13,8 @@ public class ProblemWaterJug extends Problem {
             return true;
         return false;
     }
-    Set<Object> getSuccessors(Object state){
+
+    Set<Object> getSuccessors(Object state) {
         Set<Object> set = new HashSet<>();
         StateWaterJug jugs_state = (StateWaterJug) state;
 
@@ -124,12 +125,14 @@ public class ProblemWaterJug extends Problem {
 
         return set;
     }
-    double step_cost(Object fromState, Object toState){
+
+    double step_cost(Object fromState, Object toState) {
         StateWaterJug from = (StateWaterJug) fromState;
         StateWaterJug to = (StateWaterJug) toState;
         return to.path_cost - from.path_cost;
     }
-    public double h(Object state){
+
+    public double h(Object state) {
         return 0;
     }
 
@@ -143,10 +146,10 @@ public class ProblemWaterJug extends Problem {
 
     public static void main(String[] args) {
         ProblemWaterJug problem = new ProblemWaterJug();
-        int[] jugs = {0, 0, 0};
+        int[] jugs = { 0, 0, 0 };
         problem.initialState = new StateWaterJug(jugs);
 
-        Search search  = new Search(problem);
+        Search search = new Search(problem);
 
         System.out.println("BreadthFirstTreeSearch:\t\t" + search.BreadthFirstTreeSearch());
 
