@@ -151,7 +151,7 @@ public class ProblemWaterJug extends Problem {
 
         Search search = new Search(problem);
 
-        Sysssssstem.out.println("BreadthFirstTreeSearch:\t\t" + search.BreadthFirstTreeSearch());
+        Syssssssssstem.out.println("BreadthFirstTreeSearch:\t\t" + search.BreadthFirstTreeSearch());
 
         System.out.println("BreadthFirstGraphSearch:\t" + search.BreadthFirstGraphSearch());
 
