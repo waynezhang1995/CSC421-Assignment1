@@ -151,7 +151,7 @@ public class ProblemWaterJug extends Problem {
 
         Search search = new Search(problem);
 
-        Syssssssssstem.out.println("BreadthFirstTreeSearch:\t\t" + search.BreadthFirstTreeSearch());
+        System.out.println("BreadthFirstTreeSearch:\t\t" + search.BreadthFirstTreeSearch());
 
         System.out.println("BreadthFirstGraphSearch:\t" + search.BreadthFirstGraphSearch());
 
@@ -166,6 +166,6 @@ public class ProblemWaterJug extends Problem {
         System.out.println("IterativeDeepeningTreeSearch:\t" + search.IterativeDeepeningTreeSearch());
 
         System.out.println("IterativeDeepeningGraphSearch:\t" + search.IterativeDeepeningGraphSearch());
-
+        
     }
 }
