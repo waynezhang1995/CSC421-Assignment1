@@ -96,6 +96,20 @@ public class ProblemMap extends Problem {
 		}
 	}
 
+	//Alex's way printTree
+	public static void printTreeAlex(Node n, List<Node> node_list) {
+		for(int i=0; i<node.depth; i++)
+			System.out.print("  ");
+		System.out.println(n.state + "(g=" + n.path_cost + ", h=" + sld.get(n.state) + ", f=" +
+			              (n.path_cost + sld.get(n.state)) + ")" + " order=" + n.order);
+
+		for(Node m : node_list) {
+			if(m.parent_node == n)
+				PrintTree(m);
+		}
+
+	}
+
 	public static void main(String[] args) throws Exception {
 		ProblemMap problem = new ProblemMap("romania.txt", "romaniaSLD.txt");
 		problem.initialState = "Timisoara";
@@ -123,8 +137,10 @@ public class ProblemMap extends Problem {
 
 		System.out.println("\n\nAStarTreeSearch:\t\t" + search.AstarTreeSearch());
 		printTree(search.node_list);
+		//printTreeAlex(node_list.get(0), search.node_list);
 		System.out.println("\n\nAStarGraphSearch:\t\t" + search.AstarGraphSearch());
 		printTree(search.node_list);
+		printTreeAlex(search.node_list.get(0), search.node_list);
 
 	}
 }
