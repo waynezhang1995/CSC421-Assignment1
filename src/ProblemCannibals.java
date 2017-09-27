@@ -183,8 +183,24 @@ public class ProblemCannibals extends Problem {
 
         Search search = new Search(problem);
 
-        System.out.println("\n\nAStarTreeSearch:\t\t" + search.AstarTreeSearch());
+        System.out.println("BreadthFirstTreeSearch:\t\t" + search.BreadthFirstTreeSearch());
 
-		System.out.println("\n\nAStarGraphSearch:\t\t" + search.AstarGraphSearch());
+        System.out.println("BreadthFirstGraphSearch:\t" + search.BreadthFirstGraphSearch());
+
+        System.out.println("DepthFirstTreeSearch:\t\t" + search.DepthFirstTreeSearch());
+
+        System.out.println("DepthFirstGrapthSearch:\t\t" + search.DepthFirstGraphSearch());
+
+        System.out.println("UniformCostGraphSearch:\t\t" + search.UniformCostGraphSearch());
+
+        System.out.println("UniformCostTreeSearch:\t\t" + search.UniformCostTreeSearch());
+
+        System.out.println("IterativeDeepeningTreeSearch:\t" + search.IterativeDeepeningTreeSearch());
+
+        System.out.println("IterativeDeepeningGraphSearch:\t" + search.IterativeDeepeningGraphSearch());
+
+        System.out.println("\n\nAStarGraphSearch:\t\t" + search.AstarGraphSearch());
+
+        System.out.println("\n\nAStarTreeSearch:\t\t" + search.AstarTreeSearch());
     }
 }

@@ -166,6 +166,6 @@ public class ProblemWaterJug extends Problem {
         System.out.println("IterativeDeepeningTreeSearch:\t" + search.IterativeDeepeningTreeSearch());
 
         System.out.println("IterativeDeepeningGraphSearch:\t" + search.IterativeDeepeningGraphSearch());
-        
+
     }
 }
