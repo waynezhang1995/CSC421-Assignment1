@@ -71,29 +71,17 @@ public class ProblemMap extends Problem {
 		return sld.get(state);
 	}
 
-	public static void printTree(List<Node> node_list) {
-		sortTree(node_list);
-		for (int i = 0; i < node_list.size(); i++) {
-			Node curr = node_list.get(i);
-			for (int d = 0; d < curr.depth; d++)
-				System.out.print("  ");
-			System.out.println(curr.state + "(g=" + curr.path_cost + ", h=" + sld.get(curr.state) + ", f="
-					+ (curr.path_cost + sld.get(curr.state)) + ")" + " order=" + curr.order);
+	public static void printTree(Node n, List<Node> node_list) {
+		for (int i = 0; i < n.depth; i++)
+			System.out.print("  ");
+		System.out.println(n.state + "(g=" + n.path_cost + ", h=" + sld.get(n.state) + ", f="
+				+ (n.path_cost + sld.get(n.state)) + ")" + " order=" + n.order);
 
+		for (Node m : node_list) {
+			if (m.parent_node == n)
+				printTree(m, node_list);
 		}
-	}
 
-	public static void sortTree(List<Node> node_list) {
-		for (int i = 0; i < node_list.size(); i++) {
-			Node parent = node_list.get(i);
-			for (int j = i + 1; j < node_list.size(); j++) {
-				Node curr = node_list.get(j);
-				if (curr.parent_node == parent) {
-					node_list.remove(j);
-					node_list.add(i + 1, curr);
-				}
-			}
-		}
 	}
 
 	public static void main(String[] args) throws Exception {
@@ -122,9 +110,9 @@ public class ProblemMap extends Problem {
 		System.out.println("IterativeDeepeningGraphSearch:\t" + search.IterativeDeepeningGraphSearch());
 
 		System.out.println("\n\nAStarTreeSearch:\t\t" + search.AstarTreeSearch());
-		printTree(search.node_list);
+		printTree(search.node_list.get(0), search.node_list);
 		System.out.println("\n\nAStarGraphSearch:\t\t" + search.AstarGraphSearch());
-		printTree(search.node_list);
+		printTree(search.node_list.get(0), search.node_list);
 
 	}
 }
